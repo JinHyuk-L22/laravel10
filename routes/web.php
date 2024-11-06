@@ -31,6 +31,10 @@ Route::controller(\App\Http\Controllers\HomeController::class)->group(function()
 Route::prefix('member')->controller(\App\Http\Controllers\Member\LoginController::class)->group(function() {
     Route::match(['get', 'post'], 'login', 'login')->name('member.login');
     Route::post('logout', 'logout')->name('member.logout');
+});
 
-    Route::get('test', 'test')->name('member.test');
+Route::prefix('lib')->controller(\App\Http\Controllers\Lib\LibController::class)->group(function(){
+
+    Route::get('rowspan', 'rowspan')->name('lib.rowspan');
+
 });

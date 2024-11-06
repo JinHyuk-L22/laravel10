@@ -1,10 +1,5 @@
 @extends('layouts.header')
 @section('content')
-@php
-    use App\Models\Executive;
-
-    $executive = Executive::orderBy('order_num', 'asc')->get();
-@endphp
 <script type="text/javascript" src="{{ asset('assets\js\plugins\rowspanizer\jquery.rowspanizer.js')}}"></script>
 <script>
     $(function(){
