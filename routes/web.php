@@ -31,4 +31,6 @@ Route::controller(\App\Http\Controllers\HomeController::class)->group(function()
 Route::prefix('member')->controller(\App\Http\Controllers\Member\LoginController::class)->group(function() {
     Route::match(['get', 'post'], 'login', 'login')->name('member.login');
     Route::post('logout', 'logout')->name('member.logout');
+
+    Route::get('test', 'test')->name('member.test');
 });

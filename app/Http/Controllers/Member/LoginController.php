@@ -42,8 +42,18 @@ class LoginController extends Controller{
             : view('member.login');
     }
 
-    public function logout(Request $request)
-    {
+    public function logout(Request $request){
         return $this->loginServices->logoutService($request);
+    }
+
+    public function test(Request $request){
+
+        $viewData = [
+            'sub_key' => 'login'
+        ];
+
+        view()->share($viewData);
+
+        return view('member.test');
     }
 }
