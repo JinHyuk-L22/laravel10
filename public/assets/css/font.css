@@ -1,0 +1,301 @@
+@charset "utf-8";
+/* Pretendard */
+@font-face{
+    font-family: 'Pretendard';
+    font-weight: 100;
+    font-style: normal;
+    src: url('/assets/css/fonts/Pretendard-Thin.eot');
+    src: url('/assets/css/fonts/Pretendard-Thin.eot?#iefix') format('embedded-opentype'),
+        url('/assets/css/fonts/Pretendard-Thin.woff2') format('woff2'),
+        url('/assets/css/fonts/Pretendard-Thin.woff') format('woff'),
+        url('/assets/css/fonts/Pretendard-Thin.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face{
+    font-family: 'Pretendard';
+    font-weight: 200;
+    font-style: normal;
+    src: url('/assets/css/fonts/Pretendard-ExtraLight.eot');
+    src: url('/assets/css/fonts/Pretendard-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('/assets/css/fonts/Pretendard-ExtraLight.woff2') format('woff2'),
+        url('/assets/css/fonts/Pretendard-ExtraLight.woff') format('woff'),
+        url('/assets/css/fonts/Pretendard-ExtraLight.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face{
+    font-family: 'Pretendard';
+    font-weight: 300;
+    font-style: normal;
+    src: url('/assets/css/fonts/Pretendard-Light.eot');
+    src: url('/assets/css/fonts/Pretendard-Light.eot?#iefix') format('embedded-opentype'),
+        url('/assets/css/fonts/Pretendard-Light.woff2') format('woff2'),
+        url('/assets/css/fonts/Pretendard-Light.woff') format('woff'),
+        url('/assets/css/fonts/Pretendard-Light.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face{
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-style: normal;
+    src: url('/assets/css/fonts/Pretendard-Regular.eot');
+    src: url('/assets/css/fonts/Pretendard-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/assets/css/fonts/Pretendard-Regular.woff2') format('woff2'),
+        url('/assets/css/fonts/Pretendard-Regular.woff') format('woff'),
+        url('/assets/css/fonts/Pretendard-Regular.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face{
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-style: normal;
+    src: url('/assets/css/fonts/Pretendard-Medium.eot');
+    src: url('/assets/css/fonts/Pretendard-Medium.eot?#iefix') format('embedded-opentype'),
+        url('/assets/css/fonts/Pretendard-Medium.woff2') format('woff2'),
+        url('/assets/css/fonts/Pretendard-Medium.woff') format('woff'),
+        url('/assets/css/fonts/Pretendard-Medium.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face{
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-style: normal;
+    src: url('/assets/css/fonts/Pretendard-SemiBold.eot');
+    src: url('/assets/css/fonts/Pretendard-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('/assets/css/fonts/Pretendard-SemiBold.woff2') format('woff2'),
+        url('/assets/css/fonts/Pretendard-SemiBold.woff') format('woff'),
+        url('/assets/css/fonts/Pretendard-SemiBold.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face{
+    font-family: 'Pretendard';
+    font-weight: 700;
+    font-style: normal;
+    src: url('/assets/css/fonts/Pretendard-Bold.eot');
+    src: url('/assets/css/fonts/Pretendard-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/assets/css/fonts/Pretendard-Bold.woff2') format('woff2'),
+        url('/assets/css/fonts/Pretendard-Bold.woff') format('woff'),
+        url('/assets/css/fonts/Pretendard-Bold.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face{
+    font-family: 'Pretendard';
+    font-weight: 800;
+    font-style: normal;
+    src: url('/assets/css/fonts/Pretendard-ExtraBold.eot');
+    src: url('/assets/css/fonts/Pretendard-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('/assets/css/fonts/Pretendard-ExtraBold.woff2') format('woff2'),
+        url('/assets/css/fonts/Pretendard-ExtraBold.woff') format('woff'),
+        url('/assets/css/fonts/Pretendard-ExtraBold.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face{
+    font-family: 'Pretendard';
+    font-weight: 900;
+    font-style: normal;
+    src: url('/assets/css/fonts/Pretendard-Black.eot');
+    src: url('/assets/css/fonts/Pretendard-Black.eot?#iefix') format('embedded-opentype'),
+        url('/assets/css/fonts/Pretendard-Black.woff2') format('woff2'),
+        url('/assets/css/fonts/Pretendard-Black.woff') format('woff'),
+        url('/assets/css/fonts/Pretendard-Black.ttf') format("truetype");
+    font-display: swap;
+}
+
+/* Roboto */
+@font-face{
+    font-family: 'Roboto';
+    font-weight: 100;
+    font-style: normal;
+    src: url('/assets/css/fonts/Roboto-Thin.eot');
+    src: url('/assets/css/fonts/Roboto-Thin.eot?#iefix') format('embedded-opentype'),
+        url('/assets/css/fonts/Roboto-Thin.woff2') format('woff2'),
+        url('/assets/css/fonts/Roboto-Thin.woff') format('woff'),
+        url('/assets/css/fonts/Roboto-Thin.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face{
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-style: normal;
+    src: url('/assets/css/fonts/Roboto-Light.eot');
+    src: url('/assets/css/fonts/Roboto-Light.eot?#iefix') format('embedded-opentype'),
+        url('/assets/css/fonts/Roboto-Light.woff2') format('woff2'),
+        url('/assets/css/fonts/Roboto-Light.woff') format('woff'),
+        url('/assets/css/fonts/Roboto-Light.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-style: normal;
+    src: url('/assets/css/fonts/Roboto-Regular.eot');
+    src: url('/assets/css/fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/assets/css/fonts/Roboto-Regular.woff2') format('woff2'),
+        url('/assets/css/fonts/Roboto-Regular.woff') format('woff'),
+        url('/assets/css/fonts/Roboto-Regular.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face{
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-style: normal;
+    src: url('/assets/css/fonts/Roboto-Medium.eot');
+    src: url('/assets/css/fonts/Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+        url('/assets/css/fonts/Roboto-Medium.woff2') format('woff2'),
+        url('/assets/css/fonts/Roboto-Medium.woff') format('woff'),
+        url('/assets/css/fonts/Roboto-Medium.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face{
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-style: normal;
+    src: url('/assets/css/fonts/Roboto-Bold.eot');
+    src: url('/assets/css/fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/assets/css/fonts/Roboto-Bold.woff2') format('woff2'),
+        url('/assets/css/fonts/Roboto-Bold.woff') format('woff'),
+        url('/assets/css/fonts/Roboto-Bold.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face{
+    font-family: 'Roboto';
+    font-weight: 900;
+    font-style: normal;
+    src: url('/assets/css/fonts/Roboto-Black.eot');
+    src: url('/assets/css/fonts/Roboto-Black.eot?#iefix') format('embedded-opentype'),
+        url('/assets/css/fonts/Roboto-Black.woff2') format('woff2'),
+        url('/assets/css/fonts/Roboto-Black.woff') format('woff'),
+        url('/assets/css/fonts/Roboto-Black.ttf') format("truetype");
+    font-display: swap;
+}
+
+/* Gmarket Sans */
+@font-face{
+    font-family: 'GmarketSans';
+    font-weight: 300;
+    font-style: normal;
+    src: url('/assets/css/fonts/GmarketSansLight.eot');
+    src: url('/assets/css/fonts/GmarketSansLight.eot?#iefix') format('embedded-opentype'),
+        url('/assets/css/fonts/GmarketSansLight.woff2') format('woff2'),
+        url('/assets/css/fonts/GmarketSansLight.woff') format('woff'),
+        url('/assets/css/fonts/GmarketSansLight.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face{
+    font-family: 'GmarketSans';
+    font-weight: 500;
+    font-style: normal;
+    src: url('/assets/css/fonts/GmarketSansMedium.eot');
+    src: url('/assets/css/fonts/GmarketSansMedium?#iefix') format('embedded-opentype'),
+        url('/assets/css/fonts/GmarketSansMedium.woff2') format('woff2'),
+        url('/assets/css/fonts/GmarketSansMedium.woff') format('woff'),
+        url('/assets/css/fonts/GmarketSansMedium.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face{
+    font-family: 'GmarketSans';
+    font-weight: 700;
+    font-style: normal;
+    src: url('/assets/css/fonts/GmarketSansBold.eot');
+    src: url('/assets/css/fonts/GmarketSansBold.eot?#iefix') format('embedded-opentype'),
+        url('/assets/css/fonts/GmarketSansBold.woff2') format('woff2'),
+        url('/assets/css/fonts/GmarketSansBold.woff') format('woff'),
+        url('/assets/css/fonts/GmarketSansBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+/* BCcard */
+@font-face {
+    font-family: 'BCcard';
+    font-weight: 400;
+    font-style: normal;
+    src: url('/assets/css/fonts/BCcardLight.eot');
+    src: url('/assets/css/fonts/BCcardLight.eot?#iefix') format('embedded-opentype'),
+        url('/assets/css/fonts/BCcardLight.woff2') format('woff2'),
+        url('/assets/css/fonts/BCcardLight.woff') format('woff'),
+        url('/assets/css/fonts/BCcardLight.ttf') format("truetype");
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'BCcard';
+    font-weight: 700;
+    font-style: normal;
+    src: url('/assets/css/fonts/BCcardBold.eot');
+    src: url('/assets/css/fonts/BCcardBold.eot?#iefix') format('embedded-opentype'),
+        url('/assets/css/fonts/BCcardBold.woff2') format('woff2'),
+        url('/assets/css/fonts/BCcardBold.woff') format('woff'),
+        url('/assets/css/fonts/BCcardBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+/* noto serif */
+@font-face {
+    font-family: 'Noto Serif KR';
+    font-weight: 200;
+    font-style: normal;
+    src: url('/assets/css/fonts/NotoSerifKR-ExtraLight.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Noto Serif KR';
+    font-weight: 300;
+    font-style: normal;
+    src: url('/assets/css/fonts/NotoSerifKR-Light.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Noto Serif KR';
+    font-weight: 400;
+    font-style: normal;
+    src: url('/assets/css/fonts/NotoSerifKR-Regular.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Noto Serif KR';
+    font-weight: 500;
+    font-style: normal;
+    src: url('/assets/css/fonts/NotoSerifKR-Medium.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Noto Serif KR';
+    font-weight: 600;
+    font-style: normal;
+    src: url('/assets/css/fonts/NotoSerifKR-SemiBold.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Noto Serif KR';
+    font-weight: 700;
+    font-style: normal;
+    src: url('/assets/css/fonts/NotoSerifKR-Bold.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Noto Serif KR';
+    font-weight: 800;
+    font-style: normal;
+    src: url('/assets/css/fonts/NotoSerifKR-ExtraBold.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Noto Serif KR';
+    font-weight: 900;
+    font-style: normal;
+    src: url('/assets/css/fonts/NotoSerifKR-Black.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Elice Digital Baeum';
+    font-weight: 400;
+    font-style: normal;
+    src: url('/assets/css/fonts/EliceDigitalBaeum_Regular.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Elice Digital Baeum';
+    font-weight: 700;
+    font-style: normal;
+    src: url('/assets/css/fonts/EliceDigitalBaeum_Bold.ttf') format("truetype");
+    font-display: swap;
+}

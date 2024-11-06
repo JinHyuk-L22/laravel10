@@ -1,0 +1,80 @@
+
+div.keywordSearch fieldset {display: flex;align-items:center;padding: 20px 30px;}
+div.keywordSearch input[type=text],
+div.keywordSearch input[type=submit] {height: 45px;border: 1px solid #204267;font-size: 17px;line-height: 43px;font-weight: 400;font-family: 'PretendardVariable', sans-serif;box-sizing: border-box;}
+div.keywordSearch input[type=text] {flex-grow: 1;padding: 0 15px;color: #333;}
+div.keywordSearch input[type=text]::placeholder {color: #999;font-size: 15px;font-weight: 300;}
+div.keywordSearch input[type=submit] {position: relative;flex-shrink: 0;cursor:hand;width: 80px;color: #fff;text-align: center;background-color: #204267;}
+
+.noteArea {padding: 20px 30px;color: #436f9f;font-weight: 500;font-size: 15px;line-height: 25px;background-color: #f2f8ff;}
+
+div.layerPopup {display: none;position: fixed;left: 0;top: 0;width: 100%;height: 100%;background-color: rgba(0,0,0,.6);}
+div.layerPopup > div.popupWrap {position: absolute;left: 50%;top: 50%;transform:translate(-50%, -50%);}
+
+div.popupWrap {position: relative;width: 750px;font-size: 17px;line-height: 30px;font-weight: 300;font-family: 'PretendardVariable', sans-serif;word-break:keep-all;}
+div.popupWrap h1 {display: table-cell;width: 100vw;height: 80px;margin: 0;padding: 0 30px;vertical-align: middle;font-weight: 600;font-size: 22px;line-height: 30px;color: #fff;background-color: #1e4269;}
+div.popupWrap > div.close2 {position: absolute;right: -50px;top: -50px;}
+div.popupWrap > div.close2 a,
+div.popupWrap > div.close2 img {display: block;}
+
+div.popupCon {overflow-x: hidden;overflow-y: auto;max-height:500px;background-color: #fff;}
+
+div.popupCon > div.close2 {padding: 30px 0;}
+div.popupCon > div.close2 a {display: block;width: 100px;height: 48px;margin: 0 auto;text-decoration: none;text-align: center;font-size: 17px;line-height: 48px;font-weight: 600;color: #fff;background-color: #1e4269;}
+
+ol.sort-kor, ol.sort-kor > li, ol.sort-kor a {margin: 0;padding: 0;list-style: none;text-decoration: none;}
+ol.sort-kor {display: flex !important;justify-content: center;align-items:center;gap: 0 8px;padding: 20px 0;background-color: #e8ecf0;}
+ol.sort-kor a {display: block;width: 40px;height: 40px;text-align: center;color: #436f9f;font-size: 15px;line-height: 40px;font-weight: 400;background-color: #fff;}
+ol.sort-kor .on a {background-color: #436f9f;color: #fff;}
+
+ul.result-list, ul.result-list > li, ul.result-list a {margin: 0;padding: 0;list-style: none;text-decoration: none;}
+ul.result-list {padding: 30px 30px 0;}
+ul.result-list li:not(:first-child) {margin-top: 10px;}
+ul.result-list a {display: block;position: relative;border: 1px solid #ccc;border-radius: 10px;padding: 20px 135px 20px 30px;font-weight: 400;color: #436f9f;font-size: 15px;line-height: 25px;}
+ul.result-list a:after {content: "선택";position: absolute;right: 30px;top: 50%;transform:translateY(-50%);width: 75px;height: 40px;border: 1px solid #436f9f;border-radius: 20px;text-align: center;color: #436f9f;font-size: 15px;line-height: 38px;}
+ul.result-list span {display: block;font-size: 17px;font-weight: 600;color: #333;}
+
+ul.result-list .on a,
+ul.result-list a:hover {border-color: #0f57a5;color: #fff;background-color: #0f57a5;}
+
+ul.result-list .on a:after,
+ul.result-list a:hover:after {color: #fff;border-color: #fff;}
+ul.result-list .on span,
+ul.result-list a:hover span {color: #fff;}
+
+.col-2ea,
+.col-3ea,
+.col-4ea,
+.col-5ea {display: grid; gap: 10px;}
+.col-2ea {grid-template-columns: repeat(2, 1fr);}
+.col-3ea {grid-template-columns: repeat(3, 1fr);}
+.col-4ea {grid-template-columns: repeat(4, 1fr);}
+.col-5ea {grid-template-columns: repeat(5, 1fr);}
+
+.col-2ea > *,
+.col-3ea > *,
+.col-4ea > *,
+.col-5ea > * {margin: 0 !important;}
+
+body, hr, form, fieldset, legend {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	border: 0 none;
+}
+
+.wtHolder {
+	overflow: auto;
+}
+.wtHolder::-webkit-scrollbar {
+	width: 7px;
+}
+.wtHolder::-webkit-scrollbar-thumb {
+	background-color: #043669;
+	border-radius: 10px;
+}
+.wtHolder::-webkit-scrollbar-track {
+	background-color: #C0C0C0;
+	border-radius: 10px;
+	box-shadow: inset 0px 0px 5px white;
+}

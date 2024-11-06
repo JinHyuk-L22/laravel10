@@ -1,0 +1,311 @@
+/* =====================================
+
+	* find id pw 
+	
+====================================== */
+/* Type C */
+.type3 .find-form{
+    max-width: 480px;
+    margin: 0 auto;
+}
+.type3 .find-tit-wrap{
+    margin-bottom: 35px;
+    text-align: center;
+}
+.type3 .find-tit-wrap .icon{
+    display: block;
+}
+.type3 .find-tit{
+    margin-top: 15px;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.01em;
+    color: #006e9c;
+}
+.type3 .find-tit-wrap .list-type{
+    margin-top: 35px;
+    text-align: left;
+}
+.type3 .find-tit-wrap .list-type-dot > li:before{
+    top: 10px;
+}
+.type3 .find-form .form-item{
+    width: 100%;
+    height: 55px;
+    padding: 0 20px;
+    border-color: #e5e5e4;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.type3 .find-form .form-item + .form-item{
+    margin-top: 15px;
+}
+.type3 .find-form .btn-wrap{
+    margin-top: 15px;
+}
+.type3 .btn.btn-find{
+    width: 100%;
+    padding: 18px 15px;
+    background-color: #c34690;
+    border-radius: 3px;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fff;
+}
+.type3 .btn.btn-find img{
+    margin-top: -3px;
+    margin-left: 15px;
+    vertical-align: middle;
+}
+.type3 .find-result-con{
+    margin-top: 50px;
+    padding: 30px;
+    background-color: #eff5ff;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    font-weight: 500;
+    text-align: center;
+}
+.type3 .find-result-con.no-result{
+    margin-top: 20px;
+    padding: 40px;
+    padding-right: 100px;
+    background-repeat: no-repeat;
+    background-position: right 35px center;
+    background-image: url('/assets/image/sub/ic_no_result.png');
+    background-color: #fff;
+    border: 1px solid #d0e0e8;
+    border-radius: 3px;
+    color: #556278;
+    text-align: left;
+}
+
+
+
+/* Type C */
+.login-wrap.type3{
+    overflow: hidden;
+    display: flex;
+    height: 500px;
+    border: 1px solid #cccccc;
+    border-radius: 0 0 40px 0;
+    letter-spacing: -0.04em;
+}
+.type3 .login-form{
+    width: 48%;
+}
+.type3 .login-form form{
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+.type3 .login-tit-wrap{
+    margin-bottom: 30px;
+    text-align: center;
+}
+.type3 .login-tit-wrap .icon{
+    display: block;
+    margin-bottom: 15px;
+}
+.type3 .login-tit{
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 1;
+    color: #006e9c;
+}
+.type3 .login-form .form-item{
+    width: 100%;
+    height: 50px;
+    padding: 0 20px;
+    border: 1px solid #e8e8e8;
+    border-radius: 4px;
+    font-size: 1.6rem;
+}
+.type3 .login-form .form-item + .form-item{
+    margin-top: 10px;
+}
+.type3 .login-form .btn-wrap{
+    margin-top: 10px;
+}
+.type3 .login-form .btn-wrap p{
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+.text-gray{
+    color: #b5b5b5;
+}
+.type3 .btn.btn-login{
+    width: 100%;
+    height: 60px;
+}
+.type3 .login-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 52%;
+    padding: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../image/sub/bg_login_info.png');
+    background-size: cover;
+    text-align: center;
+}
+.type3 .login-info p{
+    margin-top: 50px;
+    font-size: 2px;
+    font-size: 1.7rem;
+    letter-spacing: -0.075em;
+    line-height: 2.2;
+    color: #fff;
+}
+.type3 .login-info .btn-wrap{
+    margin-top: 30px;
+}
+.type3.login-wrap .btn{
+    border: 1px solid transparent;
+    font-size: 2rem;
+    font-weight: 600;
+}
+.type3 .btn.btn-signup .arrow{
+    display: inline-block;
+    margin-left: 40px;
+}
+
+/* =====================================
+
+	* responsive 
+	
+====================================== */
+@media screen and (max-width: 1024px){
+    /* Type C */
+    .type3 .find-form{
+        padding: 0 3%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    /* Type C */
+    .find-wrap.type3{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .type3 .find-form{
+        width: 100%;
+        padding: 0;
+    }
+    .type3 .find-tit-wrap{
+        margin-bottom: 20px;
+    }
+    .type3 .find-tit-wrap .icon img{
+        width: 40px;
+    }
+    .type3 .find-tit{
+        margin-top: 10px;
+        font-size: 20px;
+    }
+    .type3 .find-tit-wrap .list-type{
+        margin-top: 15px;
+    }
+    .type3 .find-tit-wrap .list-type-dot > li:before{
+        top: 9px;
+    }
+    .type3 .find-form .form-item{
+        height: 40px;
+        padding: 0 10px;
+        font-size: 14px;
+    }
+    .type3 .find-form .form-item + .form-item{
+        margin-top: 10px;
+    }
+    .type3 .btn.btn-find{
+        padding: 12px 10px;
+        border-radius: 2px;
+        font-size: 16px;
+    }
+    .type3 .btn.btn-find img{
+        width: 15px;
+        margin-left: 10px;
+    }
+    .type3 .find-result-con{
+        margin-top: 30px;
+        padding: 15px;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+    .type3 .find-result-con.no-result{
+        margin-top: 10px;
+        padding: 20px;
+        padding-right: 60px;
+        border-radius: 1px;
+        background-position: right 15px center;
+        background-size: 35px;
+    }
+
+    /* Type C */
+    .login-wrap.type3{
+        flex-direction: column;
+        height: auto;
+        border-radius: 0 0 20px 0;
+    }
+    .type3 .login-form,
+    .type3 .login-info{
+        width: 100%;
+    }
+    .type3 .login-form form{
+        max-width: 100%;
+        padding: 35px 10%;
+    }
+    .type3 .login-tit-wrap{
+        margin-bottom: 20px;
+    }
+    .type3 .login-tit-wrap .icon{
+        margin-bottom: 20px;
+    }
+    .type3 .login-tit-wrap .icon img{
+        width: 80px;
+    }
+    .type3 .login-tit{
+        font-size: 20px;
+    }
+    .type3 .login-form .form-item{
+        height: 35px;
+        padding: 0 10px;
+        border-radius: 2px;
+        font-size: 14px;
+    }
+    .type3 .login-form .btn-wrap p{
+        margin-bottom: 15px;
+        font-size: 13px;
+    }
+    .type3.login-wrap .btn{
+        height: auto;
+        padding: 9px 10px;
+        border-radius: 2px;
+        font-size: 15px;
+    }
+    .type3 .login-info{
+        padding: 40px 10%;
+    }
+    .type3 .login-info img{
+        height: 22px;
+    }
+    .type3 .login-info p{
+        margin-top: 20px;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+    .type3 .login-info .btn-wrap{
+        margin-top: 20px;
+    }
+    .type3 .btn.btn-signup{
+        padding: 9px 15px;
+        border-radius: 2px;
+        font-size: 14px;
+    }
+    .type3 .btn.btn-signup .arrow{
+        margin-left: 30px;
+    }
+}

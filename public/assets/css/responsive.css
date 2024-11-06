@@ -1,0 +1,2095 @@
+@charset "utf-8";
+/* ==================================================
+
+    * layout
+    
+================================================== */
+@media screen and (max-width: 1600px){
+    /* layer */
+    .inner-layer.wide{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* header */
+    .gnb-list > li > a{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 1340px){
+    /* layer */
+    .inner-layer{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* main*/    
+    .section:not(.none-fullpage) .fp-tableCell{
+        padding-top: 115px;
+    } 
+    .main-menu {
+        top: 115px;
+    }
+    
+    /* header */
+    .header-logo > a {
+        width: 98px;
+        height: 50px;
+    }
+    .header-wrap {
+        padding: 0 20px;
+    }
+    .gnb-list {
+        padding: 0 10px;
+    } 
+    .gnb-list > li > a {
+        height: 80px;
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    /* footer */
+    .footer-top .inner-layer {
+        padding-right: 100px;
+    }
+    /* sponsor */
+    .sponsor-wrap p {
+        left: 20px;
+    }
+
+    /* sub common */
+    #container.sub {
+        padding-top: 115px;
+    }
+    .sub-menu-list > li > ul > li > a {
+        max-width: 240px;
+        font-size: 18px;
+    }
+    .sub02 + .sub-menu-wrap li > ul > li > a,
+    .sub05 + .sub-menu-wrap li > ul > li > a {
+        max-width: 150px;
+    }
+    
+    /* 학회소개:: 연혁 */
+    .hisCon dd:has(span) {
+        flex-wrap: wrap;
+    }
+    .hisCon dd:has(span) p {
+        flex-shrink: unset;
+        width: 100%;
+    }
+    .hisCon dd span {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    /* 학회소개:: 회칙 */
+    .rules-menu {
+        width: auto;
+    }
+    .rules-menu.fixed {
+        left: 20px;
+        right: 20px;
+        transform: translate(0);
+    }
+    .rules-menu ul li {
+        width: calc( (100vw - 288px)/ 3);
+    }
+
+    /* 학회소개::임원진::역대회장 */
+    .staff-list li{
+        margin-top: 20px;
+        padding: 20px;
+    }
+    .staff-list.type2 .top{
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    /* 뉴스레터 :: 뉴스레터 */
+    .newsletter li {
+        width: calc(25% - 15px);
+        margin-right: 20px;
+    }
+    .staff-list.type2 .eng-name {
+        margin-left: 20px;
+    }
+    
+    /* 학술활동 :: 학술지 :: Information for Authors */
+    .author-tap.fixed {
+        left: 20px;
+        right: 20px;
+        width: auto;
+        transform: translate(0);
+    }
+    .author-tap .sub-tab-menu {
+        padding: 0 40px;
+    }
+    .author-tap .sub-tab-menu > li {
+        margin: 10px 20px 10px 0;
+    }
+
+    /* 회원가입::회원가입 인트로 */
+    .process-list li {
+        padding: 20px 10px;
+    }
+    .process-list li p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 1239px){
+    /*  MAIN::layout */  
+    .main #container {
+        padding-top: 0;
+    }
+    .main .inner-layer {
+        max-width: none;
+    }
+    .main-visual-paging {
+        left: 20px;
+    }
+    .main-menu,
+    .btn-scroll {
+        display: none;
+    }
+    
+    .slider-arrow a {
+        width: 40px;
+        height: 40px;
+        background-size: auto 15px;
+    }
+
+    /*  MAIN:: */
+    .main-visual-con .visual-tit {
+        font-size: 5.4rem;
+    }
+
+    /* MAIN:: */
+    #section02 .main-calendar {
+        margin: 0 55px;
+    }
+    #section02 .slider-arrow .prev {
+        left: 20px;
+    }
+    #section02 .slider-arrow .next {
+        right: 20px;
+    }
+
+    /* MAIN:: */
+    #section03 .slider-arrow {
+        left: 0;
+        margin-top: -20px
+    }
+    #section03 .dots-wrap {
+        margin-left: 110px;
+    } 
+    
+    /* MAIN:: */
+    #section04::after,
+    #section04::before {
+        display: none;
+    }
+    #section04 .inner-layer {
+        flex-direction: column;
+        padding-top: 0;
+    }
+    #section04 .left {
+        position: relative;
+        width: 100%;
+        padding-right: 0;
+        padding-bottom: 40px;
+    }
+    #section04 .left::before{
+        content: '';
+        z-index: -1;
+        position: absolute;
+        top: 20px;
+        bottom: 0;
+        left: -20px;
+        right: -20px;
+        width: auto;
+        height: auto;
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size: cover;
+        background-image: url(../image/main/bg_section04.png);
+    }
+    .book-list .img-wrap {
+        position: static;
+        width: 70%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    .book-list .img-wrap img {
+        width: 100%;
+    }
+    .book-list .link-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        padding-left: 0;
+        margin-top: 20px;
+    }
+    .book-list .link-wrap a{
+        width: 49%;
+    }
+    .book-list .link-wrap a + a {
+        margin-top: 0;
+    }
+
+    #section04 .right {
+        position: relative;
+        width: 100%;
+        padding-left: 0;
+        padding-top: 20px;
+    }    
+    #section04 .right::before {content: '';
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        left: -20px;
+        right: -20px;
+        width: auto;
+        height: auto;
+        background-color: #eaeff7;
+    }
+    /**/
+    .ksin-list.inner-layer {
+        padding: 0;
+    }
+    .ksin-list li a img {
+        max-width: 35%;
+        margin-right: 20px;
+    }
+    .ksin-list li a {
+        padding: 30px;
+        padding-right: 60px;
+        background-position: right 20px center;
+        background-size: 40px auto;
+    }
+    .ksin-list li:nth-of-type(2) a {
+        padding-left: 30px;
+        padding-right: 60px;
+        background-position: right 20px center;
+    }
+}
+@media screen and (max-width: 1024px){    
+    html,
+    body{
+        overflow-x: hidden;
+        font-size: 9px;
+    }
+
+    /* header */
+    .header-wrap {
+        padding: 15px 20px;
+    }
+    .gnb-list {
+        display: none;
+    }
+    .gnb-header .util-menu {
+        display: flex !important;
+    }
+    
+    .btn-menu-close{
+        width: 40px;
+        height: 40px;
+        background-image: url('../image/common/ic_menu_close.png');
+        background-size: 21px auto;
+        background-color: transparent;
+    } 
+        
+    /* gnb-menu */
+    .gnb-wrap .line {
+        display: none;;
+    }
+    .gnb-wrap{
+        background: #fff;
+    }
+    .gnb-header-top {
+        padding: 15px 20px;
+    }
+    .gnb-header-top .header-logo{
+        margin-left: 0;
+    }
+    .gnb-header-top .header-logo > a {
+        width: 68px;
+        height: 35px;
+    }
+
+    #gnb{
+        height: auto;
+    }
+    .gnb{
+        padding: 0 15px;
+    }
+    .gnb > li{
+        width: 100%;
+        margin-top: 0;
+    }
+    .gnb > li > a{
+        position: relative;
+        padding: 15px 0;
+        padding-right: 50px;
+        margin-bottom: 0;
+        font-size: 18px;
+        font-weight: 400;
+        border-bottom: 1px solid #cdd8dd;
+    }
+    .gnb > li > a:before{
+        display: block;
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        width: 23px;
+        height: 13px;
+        margin-top: -6.5px;
+        background-image: url('../image/common/ic-gnb-arrow.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+    .gnb > li.on > a{
+        font-weight: 700;
+        border-bottom: 0;
+    }
+    .gnb > li.on > a:before{
+        -webkit-transform: rotate(-180deg);
+        transform: rotate(-180deg);
+    }
+
+    .gnb > li > div{
+        display: none;
+        background-color: #e9f6fc;
+        border-top: 1px solid #006e9c;
+    }
+    .gnb > li > div > ul > li{
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid #cdd8dd;
+    }
+    .gnb > li > div > ul > li + li{
+        margin-top: 0;
+    }
+    
+    .gnb > li > div > ul > li > a{
+        display: block;
+        padding: 12px 10px;
+        font-size: 15px;
+    } 
+    .gnb > li > div > ul > li > a:hover{
+        font-weight: inherit;
+        color: inherit;
+    }
+    .gnb > li > div > ul > li > a:hover::before{
+        display: none;
+    }
+    
+
+    /* sub */
+    .sub-visual{
+        height: 235px;
+        background-position: top right;
+    }
+    .sub-visual-con{
+        padding-top: 45px;
+    }
+    .breadcrumb > li + li{
+        padding-left: 20px;
+        margin-left: 10px;
+    }
+    .breadcrumb > li + li:before{
+        font-size: 15px;
+    }
+
+    /* sub menu */
+    .sub-menu{
+        width: calc(100% - 30px);
+        margin: 0 auto;
+    }
+    .sub-menu.inner-layer{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .sub-menu-wrap{
+        height: 60px;
+        margin-top: -60px;
+    }
+    .sub-menu-list > li > ul > li > a {
+        max-width: 180px;
+        padding: 0 20px;
+        font-size: 16px;
+    }
+    .sub-menu-list > li > ul > li > a > span{
+        height: 58px;
+    }
+    .sub02 + .sub-menu-wrap li > ul > li > a,
+    .sub05 + .sub-menu-wrap li > ul > li > a {
+        padding: 0 10px;
+        max-width: 105px;
+        font-size: 14px;
+    }
+
+    /* 학술활동 학술대회 */
+    .event-list .event-text {   
+        flex-direction: column;
+    }
+    .event-list .event-text .btn-wrap {
+        margin-top: 20px;
+    }
+
+    /* 커뮤니티:: 관련사이트 */
+    .mapSearch {
+        width: 450px;
+        height: 780px;
+    }
+    .resultArea {
+        width: calc(100% - 470px);
+    }
+
+    /* 회원가입::로그인 */
+    /* 2024.10.29 김수연 추가 */
+    .login-notice li {
+        width: calc(33.3333% - 20px);
+        padding: 40px 20px;
+    }
+    
+
+    /**/
+    .mypage-list li a {
+        padding: 40px 100px 0 30px;
+    }
+    .mypage-list li .icon-mypage {
+        right: 30px;
+        bottom: 30px;
+    }
+    .mypage-list li .icon-mypage img{
+        max-height: 60px;
+    }
+    .icon-mypage::before {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+@media screen and (max-width: 768px){    
+    html,
+    body{
+        font-size: 8px;
+    }
+
+    /* header */
+    .util-wrap,
+    .gnb-list {
+        display: none;
+    }
+    #header{
+        height: auto;
+        background-color: #fff;
+    }
+    .header-logo > a {
+        width: 68px;
+        height: 35px;
+    }
+
+    /* footer */
+    .btn-top{
+        justify-content: start;
+        bottom: 260px;
+        width: 40px;
+        height: 40px;
+        padding-top: 10px;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+    .btn-top img{
+        width: 10px;
+        margin-bottom: 5px;
+    }
+    .footer-wrap > div {
+        padding: 20px 0;
+    }
+    .footer-wrap .inner-layer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .footer-top .inner-layer {
+        padding-right: 15px;
+    }
+    .footer-top dl + dl {
+        margin-top: 15px;
+    }
+    .footer-top dt {
+        font-size: 14px;
+    }
+    .footer-menu {
+        margin: 15px -5px 0
+    }
+    .footer-menu > li > a {
+        width: 120px;
+        padding: 10px 5px;
+        font-size: 12px;
+    }
+    .sponsor-rolling-wrap a:first-child {
+        height: 40px;
+    }
+    .sponsor-rolling-wrap .slick-list {
+        margin: 0 20px;
+    }
+    .sponsor-rolling-wrap .slick-slide {
+        margin: 0 5px;
+    }
+    .sponsor-rolling-wrap .slick-arrow {
+        width: 14px;
+        height: 14px;
+    }
+
+    /* sponsor */
+    .sponsor-wrap p {
+        display: none;
+    }
+    .sponsor-rolling-wrap {
+        margin-left: 0;
+    }
+
+    /* MAIN:: */  
+    .section:not(.none-fullpage){
+        height: auto !important;
+    }
+    .section:not(.none-fullpage) .fp-tableCell{
+        height: auto !important;
+        padding: 30px 0;
+    }
+
+    .main-tit-wrap {
+        margin-bottom: 20px;
+    }
+    .main-tit-wrap h2 {
+        font-size: 24px;
+    }
+    .main-tit-wrap p {
+        margin-top: 15px;
+    }
+    .icon-tit::before {
+        width: 12px;
+        height: 12px;
+    }
+
+    .slider-arrow a {
+        width: 35px;
+        height: 35px;
+    }
+
+    /* MAIN:: */
+    #section01 {
+        background-image: url('../image/main/img_mainvisual_m.png');
+    }
+    #section01 .fp-tableCell {
+        padding-top: 70px;
+        padding-bottom: 0;
+    }
+    .main-visual-con .inner-layer{
+        padding: 40px 30px 80px;
+    }
+    .main-visual-con .visual-tit {
+        margin-bottom: 10px;
+        font-size: 27px;
+    }
+    .main-visual-con .visual-sub-tit {
+        margin-bottom: 0;
+        font-size: 14px;
+    }
+    .main-visual-con .img-wrap {
+        position: absolute;
+        right: 20px;
+        bottom: 0;
+        width: 30%;
+    }
+    .main-visual-paging {
+        bottom: 20px;
+    } 
+    .main-visual-paging li {
+        margin-right: 10px;
+    }
+    .main-visual-paging .progress {
+        width: 60px;
+    }
+
+    /* MAIN:: */
+    #section02 {
+        background-image: none;
+        background-color: #364665;
+    }
+    #section02 .main-calendar {
+        margin: 0 10%;
+    }
+    .main-calendar .slick-list {
+        margin: 0;
+    }
+    .main-calendar .slick-slide {
+        margin: 0 5px;
+    }
+    .main-calendar-con .top p {
+        padding: 10px 0;
+        padding-left: 35px;
+        padding-right: 0;
+        font-size:14px;
+        background-size: 16px auto;
+        background-position: left 15px center;
+    }
+    .main-calendar-con .bottom {
+        height: auto;
+        padding: 15px 15px 45px;
+        font-size: 14px;
+    }
+    .main-calendar-con .ellipsis2 {
+        -webkit-line-clamp: 3;
+    }
+    .main-calendar-con .location {
+        right: 15px;
+        bottom: 15px;
+    }
+    #section02 .slider-arrow {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    #section02 .slider-arrow a {
+        position: static;
+    }
+    #section02 .slider-arrow .next{
+        margin-left: 10px;
+    }
+
+    /* MAIN:: */
+    #section03 {
+        background-image:url('../image/main/bg_section03_m.png');
+    }
+    #section03 .tab-wrap {
+        margin-bottom: 20px;
+    }
+    .main-tab-menu li a {
+        height: 30px;
+        font-size: 14px;
+    }
+    .main-news {
+        margin: 0 10%;
+    }
+    .main-news .slick-slide > div {
+        margin: 0 5px;
+    }
+    .main-news-con a {
+        padding: 15px;
+        padding-bottom: 30px;
+    }
+    .main-news-con .des {
+        margin: 15px 0;
+        -webkit-line-clamp: 4;
+    }
+    .main-news-con .date {
+        right: 15px;
+        bottom: 15px;
+    }
+    #section03 .slick-attr {
+        margin-top: 0;
+    }
+    #section03 .slider-arrow {
+        position: static;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    /* MAIN:: */
+    #section04 .fp-tableCell {
+        padding-bottom: 0;
+    }
+    #section04 .main-tit-wrap {
+        margin-bottom: 20px;
+    }
+    #section04 .left {
+        padding-bottom: 30px;
+    }
+    #section04 .left h3 {
+        font-size: 24px;
+    }
+    #section04 .left p {
+        font-size: 16px;
+    }
+    .book-list {
+        margin-bottom: 20px;
+    }
+    .book-list .img-wrap {
+        width: 50%;
+        max-width: none;
+        box-shadow: 0px 0px 10px 0 rgba(32, 65, 133, 0.5);
+    }
+    .book-list .link-wrap a {
+        padding: 10px;
+        border-width: 2px;
+        background-size: auto 10px
+    }
+
+    #section04 .right {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .quick-list li {
+        width: calc(50% - 10px);
+        margin: 5px;
+    }
+    .quick-list li a {
+        height: 110px;
+        font-size: 17px;
+        background-size: auto 40px;
+        background-position: right 10px bottom 10px;
+    }
+
+    /* MAIN:: */
+    .ksin-wrap {
+        background-image: none;
+    }
+    .ksin-list {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .ksin-list li {
+        width: 100%;
+    }
+    .ksin-list li a {
+        padding: 15px 20px;
+        padding-right: 45px;
+        background-size: 24px auto;
+        font-size: 18px;
+    }
+    .ksin-list li:nth-of-type(1) a  {
+        background-color: #be7fd8;
+    }
+    .ksin-list li:nth-of-type(2) a {
+        padding-left: 20px;
+        padding-right: 45px;
+        background-color: #398fc1;
+    }
+    .ksin-list li a img {
+        width: 26%;
+        margin-right: 10px;
+    }
+
+    /* sub */
+    #container.sub{
+        padding-top: 0;
+    }
+    .sub-visual{
+        display: none;
+    }
+
+    /* sub menu */
+    .sub-menu-wrap{
+        position: relative;
+        z-index: 9;
+        width: 100%;
+        height: 65px;
+        margin-top: 0;
+        margin-bottom: 0;
+        border: 0;
+    }
+    .sub-menu{
+        bottom: 0;
+        width: 100%;
+        border: 0;
+        text-align: left;
+    }
+    .sub-menu.inner-layer{
+        padding: 0;
+        background-color: #006e9c;
+        border-radius: 0;
+    }
+    .sub-menu .btn-home{
+        display: block;
+        width: 45px;
+        height: 65px;
+        margin: 0;
+        border-radius: 0;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url('/assets/image/sub/ic_home.png');
+        background-size: 16px;
+    }
+    .sub-menu-list{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: calc(100% - 90px);
+        margin: 0 45px;
+        border: 0;
+    }
+    .sub-menu-list > li{
+        position: relative;
+        width: 100%;
+    }
+    .sub-menu-list > li > ul > li + li > a:before{
+        display: none;
+    }
+    .sub-menu .btn-sub-menu{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 65px;
+        padding: 0;
+        font-size: 23px;
+        font-weight: 600;
+        color: #fff;
+        line-height: 1.2;
+        word-break: keep-all;
+    }
+    .btn-sub-menu:after{
+        display: inline-block;
+        content: '▼';
+        clear: both;       
+        margin-left: 12px;
+        font-size: 10px; 
+        -webkit-transition: 0.3s ease;
+        transition: 0.3s ease;
+    }
+    .btn-sub-menu.on:after {
+        -webkit-transform: translateY(-50%) rotate(180deg);
+        transform: translateY(-50%) rotate(180deg);
+        margin-top: 12px;
+    }
+    .sub-menu-list .sub-menu-depth01{
+        display: block;
+    }    
+    .sub-menu-list .sub-menu-depth01 > ul{
+        z-index: 6;
+    }
+	.sub-menu-depth01:not(:has(ul)) .btn-sub-menu:after{
+		display: none;
+    }
+    
+    .sub-menu-list .sub-menu-depth02{
+        width: calc(100% + 90px);
+        height: 45px;
+        margin-left: -45px;
+    }    
+    .sub-menu-depth02 .btn-sub-menu{
+        justify-content: space-between;
+        height: 100%;
+        padding: 0 20px;
+        background-color: #e9f6fc;
+        font-size: 18px;
+        font-weight: 400;
+        color: #111;
+    }
+    .sub-menu-list .sub-menu-depth02 > ul{
+        top: 45px;
+        left: 0;
+        z-index: 2;
+        width: 100%;
+        margin-left: 0;
+        background-color: #e9f6fc;
+        border-top: 1px solid #77b5d2;
+    }
+    .sub-menu-list .sub-menu-depth02 > ul > li > a{
+        font-size: 16px;
+        color: #111;
+        border-bottom: 1px solid #d0e0e7;
+    }
+    .sub-menu-list li + li{
+        border-left: 0;
+    }
+    .sub-menu-list li > ul{
+        display: none;
+        position: absolute;
+        top: 65px;
+        width: calc(100% + 90px);
+        height: auto;
+        margin-left: -45px;
+        border-top: 1px solid #e9f6fc;
+        background-color: #006e9c;
+    }
+    .sub-menu-list li > ul > li{
+        display: block;
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+    .sub-menu-list li > ul > li > a{
+        max-width: none !important;
+        padding: 15px !important;
+        font-size: 16px;
+        color: #fff;
+        border-bottom: 1px solid rgba(255,255,255,0.25);
+    }
+    .sub-menu-list li > ul > li > a span{
+        display: block;
+        height: auto;
+        text-align: left;
+    }
+    .sub-menu-list > li > ul > li > a > span:before{
+        display: none;
+    }
+    .sub-menu-list > li.sub-menu-depth01 > ul > li.on > a,
+    .sub-menu-list > li.sub-menu-depth01 > ul > li:hover > a {
+        color: #fff;
+        font-weight: 400;
+    }
+    .sub-menu-list > li.sub-menu-depth02 > ul > li.on > a,
+    .sub-menu-list > li.sub-menu-depth02 > ul > li:hover > a {
+        color: #111;
+        font-weight: 400;
+    }
+
+    /* sub contents */
+    .sub-contents{
+        padding-top: 75px;
+        padding-bottom: 60px;
+    }
+    .sub-tit-wrap{
+        margin-bottom: 30px;
+    }
+    .sub-tit{
+        font-size: 23px;
+    }
+    .sub-tit:before{
+        top: -15px;
+        left: -20px;
+        width: 28px;
+        height: 20px;
+        background-size: 100%;
+    }
+    .sub-contit-wrap{
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    .sub-contit-wrap:has(.right),
+    .sub-contit-wrap.start:has(.btn) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .sub-contit-wrap.start .btn {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .sub-contit-wrap .right{
+        width: 100%;
+        margin-top: 10px;
+    }
+    .sub-contit-wrap .right .checkbox-wrap {
+        margin-left: 5px;
+    }
+    .sub-contit-wrap select {
+        height: 30px
+    }
+    .sub-contit{
+        font-size: 17px;
+    }
+    .sub-contit::before {
+        top: -10px;
+        width: 12px;
+        height: 5px;
+    }
+    .sub-contit.underline{
+        font-size: 16px;
+        -webkit-box-shadow: inset 0 -6px #eef3fc;
+        box-shadow: inset 0 -6px #eef3fc;
+    }
+    .sub-tit-img{
+        padding-left: 20px;
+        background-size: 15px;
+        background-position: 0 4px;
+        font-size: 16px;
+    }
+    .sub-conbox{
+        font-size: 14px;
+        /* word-break: keep-all; */
+    }
+    .cate-tit {
+        font-size: 15px;
+        line-height: 40px;
+    }
+    .contit {
+        margin: 10px 0;
+        font-size: 16px;
+    }
+
+    /* 준비중 */
+    .ready-wrap{
+        padding-bottom: 30px;
+    }
+    .ready-wrap img{
+        max-width: 100%;
+    }
+    .ready-wrap .tit{
+        padding: 0 20px;
+        font-size: 19px;
+    }
+    .ready-wrap p{
+        margin-top: 15px;
+        font-size: 14px;
+    }     
+
+    /* pc only */
+    .pconly-wrap img{
+        max-width: 80%;
+    }
+    
+    /* 학회소개:: 소개 */
+    .intro-wrap .tit{
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    /* 학회소개:: 인사말 */
+    .message-wrap .text-right{
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 20px;
+    }
+    .message-wrap .text-right img {
+        max-width: 55%;
+    }
+    
+    /* 학회소개::연혁 */
+    .history {
+        margin-top: 50px;
+    }
+    .history-list {
+        flex-direction: column;
+        padding-left: 45px;
+        margin-top: 50px;
+    }
+
+    .history:before {
+        left: 19px;
+        right: auto;
+        width: 5px;
+    }
+    .historyLine {
+        left: 19px;
+        right: auto;
+        width: 5px;
+    }
+    .history .year {
+        margin-bottom: 30px;
+    }
+    .history .year:before {
+        left: -30px;
+        right: auto;
+        width: 12px;
+        height: 12px;
+    }
+    .history .year span {
+        margin-top: -15px;
+        font-size: 38px;
+    }
+    .history .year span::before {
+        left: -10px; 
+        bottom: -5px;
+        width: 87px;
+        height: 18px;
+    }
+    .hisCon {
+        width: 100%;
+    }
+    .hisCon dt {
+        width: 110px;
+    }
+    .hisCon dd {
+        width: calc(100% - 130px);
+    }
+    .hisCon dd span {
+        display: block;
+        margin: 0;
+    }
+    
+    /* 학회소개:: 회칙 */
+    .rules-wrap.fixed {
+        padding-top: 50px;
+    }
+    .rules-menu {
+        padding: 5px 80px;
+    }
+    .rules-menu ul li {
+        width: calc(100vw - 207px);
+    }
+    .rules-menu ul li::after {
+        display: none
+    }
+    .rules-menu ul li span {
+        line-height: 30px;
+    }
+    .rules-menu ul li:hover span,
+    .rules-menu ul li.on span {
+        font-size: 20px;
+    }
+    
+    .rules-menu-util .prev-wrap,
+    .rules-menu-util .next-wrap {
+        top: 5px;
+        width: 80px;
+        height: auto;
+    }
+    .rules-menu-util a {
+        width: 30px;
+        height: 30px;
+    }
+    .rules-menu ul li span {
+        font-size: 17px;
+    }
+    .rules-menu-util a img {
+        height: 12px;
+    }
+
+    .rule-con {
+        padding-top: 40px;
+    }
+    .rules-tit {
+        padding-bottom: 20px;
+        border-bottom: 1px solid #e2e2e2;
+    }
+    .rules-tit::after {
+        display: none;
+    }
+    .rules-tit span {
+        font-size: 16px;
+    }
+    .rules-tit span i {
+        display: block;
+    }
+    .rules-des {
+        margin-top: 20px;
+    }
+
+        
+    /* 학술활동 :: 학술지 :: Greetings */
+    .rules-box {
+        flex-direction: column;
+        margin: 40px 0;
+    }
+    .rules-box img {
+        margin: 0 auto 20px;
+    }
+    .rules-box + .text-right img{
+        max-width: 70%;
+    }
+
+    /* 학회소개::임원진::명예회장,역대회장 */
+    .staff-list li, .staff-list.type2 li {
+        width: calc(50% - 10px);
+        margin-top: 20px;
+        margin-right: 15px;
+        background-size: 150px auto;
+        border-radius: 20px 5px 20px 5px;
+    }
+    .staff-list.type2 li{
+        margin-top: 40px;
+    }
+    .staff-list li:nth-of-type(5n),
+    .staff-list.type2 li:nth-of-type(4n) {
+        margin-right: 15px;
+    }
+    .staff-list li:nth-of-type(2n),
+    .staff-list.type2 li:nth-of-type(2n) {
+        margin-right: 0;
+    }
+    .staff-list li .tit {
+        font-size: 15px;
+    }
+    .staff-list.type2 .tag {
+        width: 70px;
+        line-height: 30px;
+        margin-top: -14px;
+        font-size: 12px;
+    }
+    .staff-list.type2 .tag::before {
+        left: -8px;
+        border-bottom: 7px solid #3b6681;
+        border-top: 7px solid transparent;
+        border-left: 4px solid transparent;
+        border-right: 4px solid #3b6681;
+    }
+    .staff-list.type2 .tag.pink::before {
+        border-bottom: 7px solid #813b60;
+        border-top: 7px solid transparent;
+        border-left: 4px solid transparent;
+        border-right: 4px solid #813b60;
+    }
+    .staff-list.type2 .eng-name {
+        margin-left: 12px;
+        font-size: 13px;
+    }
+
+    /* 학술활동 :: 학술지 :: Information for Authors */
+    .author-tap{
+        height: auto;
+        border: 0;
+    }
+    .author-tap-wrap.fixed {
+        padding-top: 60px;
+    }
+    .author-tap .btn-tab-menu {
+        position: relative;
+        display: block !important;
+        width: 100%;
+        height: 100%;
+        min-height: auto;
+        padding: 12px 15px;
+        padding-right: 30px;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1;
+        background-color: #f7fcfc;
+        border: 1px solid #009c9b;
+        color: #009c9b !important;
+    }
+    .author-tap .sub-tab-menu {
+        display: none;
+        height: auto;
+        position: absolute;
+        top: 38px;
+        left: 0;
+        z-index: 2;
+        width: calc(100%);
+        padding: 0;
+        height: auto;
+        border-top: 0;
+        border-radius: 0;
+        background-color: #f7fcfc;
+        border: 1px solid #009c9b;
+        border-top: 0;
+    }
+    .author-tap .btn-tab-menu:before {
+        display: block;
+        content: '';
+        clear: both;
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        z-index: 1;
+        width: 10px;
+        height: 10px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url(/assets/image/icon/ic_tab_menu.png);
+        background-size: 10px;
+        -webkit-transition: 0.3s ease;
+        transition: 0.3s ease;
+    }
+    .author-tap .btn-tab-menu.on:before {
+        -webkit-transform: translateY(-50%) rotate(180deg);
+        transform: translateY(-50%) rotate(180deg);
+    }
+    .author-tap .sub-tab-menu > li {
+        display: block;
+        height: auto;
+        padding: 0 15px;
+        margin: 0;
+        text-align: left;
+        border-radius: 0;
+        font-size: 14px;
+        line-height: 1.1;
+        color: #009c9b;
+        font-weight: 300;
+        border: 0;
+    }
+    .author-tap .sub-tab-menu > li > a {
+        display: block;
+        padding: 10px 0;
+    }
+    .author-tap .sub-tab-menu > li.on > a {
+        font-weight: 400;
+        box-shadow: none;
+    }
+    
+    /* 학술활동:: 일정 */
+    .years {
+        padding: 0 70px;
+        border-radius: 10px;
+    }
+    .years.fixed {
+        width: calc(100% - 30px);
+    }
+    .years ul li {
+        display:none;
+        float: left;
+        width: 100%;
+    }
+    .years ul li.on {
+        display:block;
+    }
+    .years ul li.on span {
+        font-size: 20px;
+        line-height: 45px;
+    }
+    .yearsUtil span.prev,
+    .yearsUtil span.next {
+        top: 0;
+        height: 45px;
+        padding: 7px 5px;
+        box-sizing: border-box;
+    }
+    .yearsUtil span.prev > a,
+    .yearsUtil span.next > a  {
+        padding: 10px;
+    }
+    .years ul li:after {
+        display: none;
+    }
+    .yearsUtil img {
+        height: 12px;
+    }
+
+    .scheduleUtil {
+        margin: 10px 0;
+    }
+    .schedule-wrap .cst-table td {
+        padding: 20px 0;
+    }
+    .schedule-wrap .cst-table .tit-wrap {
+        padding:20px 15px;
+    }
+    .schedule-wrap .cst-table .tit {
+        margin-bottom: 5px;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .schedule-wrap .cst-table .venue {
+        font-size: 14px;
+    }
+
+    /* 학술활동:: 학술대회:: list */
+    .event-list + .sub-contit-wrap {
+        margin-top: 60px;
+    }
+    .event-list li {
+        position: relative;
+    }
+    .event-list li:has(.event-text .btn-wrap){
+        padding-bottom: 40px;
+    }
+    .event-list .event-tit {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 0;
+    }
+    .event-list .event-tit .tit {
+        font-size: 14px;
+    }
+    .event-list .event-tit .left {
+        justify-content: space-between;
+        width: 100%;
+    }
+    .event-list .btn-wrap {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .event-list .event-tit .color-type14 {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        align-items: center;
+        width: 100%;
+        font-weight: 600;
+    }
+    .event-list .event-tit .btn img {
+        height: 16px;
+        margin-right: 0;
+    }
+    .event-list .event-text {
+        display: block;
+        padding: 20px;
+    }
+    .event-list .event-text .left > div {
+        display: block;
+    }
+    .event-list .event-text .left > div + div {
+        margin-top: 0;
+    }
+    .event-list .event-text dl{
+        padding-left: 0.5em;
+        padding-right: 0;
+        margin-right: 0;
+        margin: 3px 0;
+    }
+    .event-list .event-text dl::before{
+        content:'\00B7';
+        display: inline-block;
+        width: 0.5em;
+        margin-left: -0.5em;
+        font-weight: 800;
+        font-size: 16px;
+        line-height: 0;
+        color: #006e9c;
+    }
+    .event-list .event-text dl::after{
+        display: none;
+    }
+    .event-list .event-text dl + dl {
+        padding-left: 0.5em;
+    }
+    .event-list .event-text dl + dl::before {
+        content:'\00B7';
+        display: inline-block;
+        position: static;
+        width: 0.5em;
+        height: auto;
+        margin:0;
+        margin-left: -0.5em;
+        background: none;
+        color: #006e9c;
+    }
+    .event-list .event-text dt {
+        font-weight: 600;
+    }
+    .event-list .event-text .btn-wrap {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        text-align: center !important;
+        margin: 0;
+    }
+    .event-list .event-text .btn-wrap .btn {
+        width: 32.2%;
+    }
+    .event-list.off .event-text .btn-wrap .btn {
+        width: 100%;
+    }
+
+    /* 학술활동:: 학술대회:: 사전등록 */
+    .ev-banner{
+        margin-bottom: 15px;
+        padding: 25px;
+        background-image: url('/assets/image/sub/bg_ev_banner_m.png');
+    }
+    .ev-banner .ev-tit{
+        font-size: 20px;
+    }
+    .ev-banner ul{
+        margin-top: 10px;
+    }
+    .ev-banner ul > li {
+        font-size: 13px;
+    }
+
+    /* 학술활동:: 학술대회:: 사전등록 write */
+    .term-conbox.scroll-y{
+        max-height: 250px;
+        padding: 15px; 
+    }
+
+    .price-wrap {
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    .d-day-wrap {
+        padding: 20px;
+        margin-bottom: 15px;
+        font-size: 16px;
+    }
+    .d-day-wrap img {
+        width: 36px;
+    }
+
+    .non-member-wrap {
+        flex-direction: column;
+        font-size: 14px;
+    }
+    .non-member-wrap img{
+        width: 30px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .notice-wrap {
+        padding:20px 20px 0;
+        font-size: 16px;
+    }
+    .notice-wrap img {
+        width: 43px;
+    }
+
+    .symposium-wrap .dl-wrap dl + dl {
+        margin-top: 20px;
+    }
+    .symposium-wrap .dl-wrap dt {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        font-size: 14px;
+        line-height: 30px;
+        border-radius: 0;
+    }
+    .symposium-wrap .dl-wrap dd {
+        float: none;
+        width: 100%;
+    }
+    
+    .success-wrap .text-wrap {
+        padding: 40px 15px;
+    }
+    .success-wrap img{
+        width: 124px;
+    }
+    .success-wrap .tit {
+        margin: 20px 0;
+        font-size: 18px;
+    }
+    .success-wrap .tit span {
+        font-size: 20px;
+    }
+    .success-wrap .num-text {
+        font-size: 18px;
+    }
+
+    /* 학술대회:: 사전등록::사전등록확인 */
+    .confirm-contop {
+        margin-bottom: 20px;
+        padding-top: 20px;
+    }
+    .confirm-contop p {
+        font-size: 20px;
+    }
+    .confirm-form .form-group input {
+        height: 40px;
+    }
+    .nodata-wrap p { 
+        font-size: 22px;
+    }
+
+    .abstract-view {
+        padding:25px;
+    }
+    .abstract-view .tit-wrap {
+        margin:20px 0 30px
+    }
+    .abstract-view .tit {
+        font-size: 20px;
+    }
+    .abstract-view dl + dl {
+        margin-top: 20px;
+    }
+
+    /* 학술행사::학술대회::오시는길 */
+    .ev-map-wrap {
+        height: 350px;
+    }
+    .ev-map-info {
+        margin-top: 20px;
+        padding: 15px;
+    }
+    .ev-map-info p {
+        font-size: 18px;
+    }
+    .ev-map-info ul {
+        padding-left: 0;
+    }
+    .ev-map-info ul > li {
+        background-size: 20px;
+        padding-left: 30px;
+    }
+        
+    /* 학술활동:: 학술지 :: reviewer*/
+    .reviewer-wrap .tit {
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+
+    /* 학술활동:: 학술지 :: MED Search*/
+    .form-group.medSearch {
+        padding-right: 0;
+    }
+    .form-group.medSearch .radio-wrap {
+        position: static;
+        margin-top: 10px;
+        transform: translate(0,0)
+    }
+
+    /* 학술활동:: 학술상 :: */
+    .award-list dl {
+        flex-direction: column;
+        padding: 20px 0; 
+    }
+    .award-list dt {
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+
+    /* 회원마당:: 학술자료 */
+    .resource-list > li {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    .resource-list > li:has(.btn-admin) {
+        margin-bottom: 15px;
+    }
+    .resource-list li > a {
+        padding: 15px;
+    }
+    .resource-list .bbs-tag {
+        width: auto;
+        min-width: 50%;
+        margin: 0 -15px;
+        padding: 8px 30px 8px 10px;
+        font-size: 13px;
+    }
+    .resource-list .bbs-tit {
+        margin: 10px 0;
+        font-size: 15px;
+    }
+    
+
+    /* 회원마당:: 온라인강의영상 */
+    .vod-class-list > li {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+        border-radius: 20px 0 20px 0;
+    }
+    .vod-class-list > li > a {
+        padding: 20px 30px;
+        border-radius: 20px 0 20px 0;
+    }
+    .vod-class-list .tit {
+        margin: 10px 0 20px;
+        font-size: 17px;
+    }
+
+    /* 회원마당:: 월례집담회 */
+    .table-wrap:has(.table-open) {
+        margin-top: 40px;
+    }
+    .member-wrap .write-wrap select {
+        min-width: 49.3%;
+    }
+    .member-wrap .n1 select {
+        min-width: 100%;
+    }
+    
+    /* 뉴스레터 :: 뉴스레터 */
+    .newsletter li {
+        width: calc(33.3333% - 10px);
+        margin-right: 15px;
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+    .newsletter li:nth-child(4n) {
+        margin-right: 15px;
+    }
+    .newsletter li:nth-child(3n) {
+        margin-right: 0;
+    }
+    .newsletter .thumb {
+        height: 260px;
+    }
+    .newsletter .thumb:after {
+        background-size: 33px;
+    }
+    /*   .newsletter .tit {
+        margin-top: 15px;
+    } */
+
+    /* 치료적정성 평가 프로그램 :: 치료적정성평가프로그램 */
+    .evaluation-wrap .cate-tit {
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+    .evaluation-wrap .img-wrap {
+        font-size: 14px;
+    }
+    .evaluation-wrap .img-wrap.line {
+        padding: 30px 0;
+    }
+    .evaluation-wrap .img-wrap p {
+        margin-top: 10px;
+    }
+    .evaluation-wrap .img-wrap .arrow {
+        height: 26px;
+        margin: 25px auto;
+    }
+
+    /* 치료적정성 평가 프로그램 :: 적정성평가 신청 */
+    .evaluation-wrap .box-wrap .box {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .evaluation-wrap .box-wrap a {
+        border-radius: 8px;
+    }
+    .evaluation-wrap .box-wrap i {
+        margin: 20px auto;
+        height: 67px;
+    }
+    .evaluation-wrap .box-wrap .box:nth-child(2) i {
+        width: 85px;
+        height: 63px;
+    }
+    .evaluation-wrap .box-wrap a p {
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 15px;
+    }
+    .evaluation-wrap .box-wrap .text-red {
+        font-size: 13px;
+    }
+
+    .evaluation-wrap .preview {
+        font-size: 18px;
+    }
+    .evaluation-wrap .preview img {
+        margin:40px 0 20px;
+        width: 56px;
+    }
+    .evaluation-wrap .preview .num {
+        margin-top: 20px;
+        padding: 20px 10px;
+    }
+    
+    /* KSIN 인증의 인증병원::지역 인증의 및 병원 찾기 */
+    .mapSearch {
+        display: none;
+    }
+    .resultArea {
+        width: 100%;
+    }
+    .resultArea dl {
+        padding: 15px 0;
+    }
+    .resultArea dt {
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+    .resultArea dt span {
+        margin-right: 5px;
+        width: 40px;
+        line-height: 20px;
+        font-size: 13px;
+    }
+    .resultArea dd li + li {
+        margin-top: 10px;
+    }
+    .resultArea dd li img {
+        height: 15px;
+    }
+    .resultArea dd li.name {
+        position: static;
+        text-align: right;
+    }
+
+    /* KSIN 인증의 인증병원::지역 인증의 및 병원 찾기 */
+    .certify_box {
+        padding: 50px 15px;
+        font-size: 14px;
+    }
+    .certify_box .tit {
+        font-size: 16px;
+    }
+    .certify_box .des {
+        margin: 20px 0;
+        line-height: 1.8;
+    }
+
+     /* 마이페이지:: 인트로 */
+    .mypage-list li{
+        width: 100%;
+        min-height: auto;
+        margin-right: 0;
+        margin-bottom: 15px;
+        border-radius: 15px;
+    }
+    .mypage-list li a{        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        border-radius: 15px;
+    }
+    .mypage-list li .icon-mypage{
+        position: relative;
+        right: auto;
+        bottom: auto;
+        max-width: 50px;
+        max-height: 50px;
+    }
+    .icon-mypage::before {
+        width: 60px;
+        height: 60px;
+    }
+    .mypage-list li .icon-mypage img{
+        max-width: 100%;
+        max-height: 50px;
+    }
+    .mypage-list li p {
+        font-size: 18px;
+    }
+
+    /* 마이페이지::개인정보 수정 */
+    .mypage-wrap.confirm-wrap img{
+        max-width: 66px;
+    }
+    .confirm-wrap .form .write-wrap {
+        margin-top: 20px;
+    }
+
+    /* 마이페이지::비밀번호 변경 */
+    .password-wrap img {
+        max-width: 50px;
+    }
+    .mypage-tit {
+        margin: 10px 0;
+        font-size: 18px;
+    }
+    .noti-box {
+        padding: 15px 30px;
+    }
+
+    /* 마이페이지::나의 회비납부 현황 */
+    .fee-wrap .box {
+        margin: 20px 0;
+    }
+    .fee-wrap .box li + li {
+        margin-top: 5px;
+    }
+    .fee-wrap .box .img {
+        width: 80px;
+    }
+    .fee-wrap .box .img img {
+        width: 53px;
+    }
+    .fee-wrap .box .text-wrap {
+        width: calc(100% - 80px);
+    }
+    .fee-wrap .box .tit {
+        font-size: 18px;
+    }
+    .account-wrap {
+        margin-bottom: 25px;
+    }
+    .account-wrap strong {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 5px;
+        font-size: 18px;
+    }
+
+    /* 마이페이지::회원탈퇴 */
+    .resign-form img {
+        max-width: 50px;
+    }
+
+    /* 마이페이지:: 학술대회 등록 및 영수증 출력*/
+    .my-symposium-wrap .event-list .event-tit {
+        padding-left: 20px;
+    }
+    .my-symposium-wrap .box {
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+    .my-symposium-wrap .box .img {
+        width: 60px;
+    }
+    .my-symposium-wrap .box .img img{
+        width: 100%;
+    }
+    .my-symposium-wrap .box .text-wrap {
+        width: calc(100% - 80px);
+    }
+    .my-symposium-wrap .box .tit {
+        margin-bottom: 5px;
+        font-size: 18px;
+    }
+    .my-symposium-wrap .box .text-red {
+        position: static;
+        margin-top: 10px;
+        font-size: 13px;
+    }
+
+    /* 마이페이지:: 학술대회 참가 이력 관리*/
+    .my-symposium-wrap .table-wrap thead {
+        display: none;
+    }
+    .my-symposium-wrap .table-wrap tr {
+        padding: 10px 0;
+        border-bottom: 1px solid #e5e5e5;
+    }
+    .my-symposium-wrap .table-wrap td {
+        text-align: left;
+        border-bottom: 0;
+    }
+    .my-symposium-wrap .table-wrap td.name {
+        margin: 10px 0;
+        font-weight: 600;
+        font-size: 16px;
+    }
+    .my-symposium-wrap .table-wrap td.location {
+        text-align: right;
+    }
+
+    /* 마이페이지:: 신경중재치료 인증서 출력 */
+    .certification-wrap .box {
+        flex-direction: column;
+        margin-bottom: 40px;
+        padding: 15px;
+        font-size: 16px;
+    }
+    .certification-wrap .box img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    /* 회원가입::회원가입 인트로 */
+    .process-list {
+        margin: 10px 0 20px;
+    }
+    .process-list li {
+        width: calc(50% - 15px);
+        height: 120px;
+        margin-right: 30px;
+        margin-top: 30px;
+        border-radius: 10px 10px 20px 10px;
+    }
+    .process-list li::after {
+        right: -25px;
+    }
+    .process-list li:nth-of-type(2n){
+        margin-right: 0;
+    }
+    .process-list li:nth-of-type(2n)::after {
+        display: none;
+    }
+    .process-list li span {
+        top: -15px;
+        width: 30px;
+        line-height: 30px;
+        font-size: 18px;
+    }
+    .process-list li p {
+        font-size: 16px;
+    }
+
+    .join-intro .noti-wrap {
+        background-size: 25px auto;
+        background-position: left center;
+        padding-left: 35px;
+    }
+
+    /* 회원가입::회원가입 */
+    .step-list::before {
+        top: 20px;
+        height: 1px;
+    }
+    .step-list > li {
+        width: 80px;
+    }
+    .step-list .icon{
+        width: 40px;
+        height: 40px;
+        background-size: 20px auto;
+    }
+    .step-list > li strong{
+        margin-top: 10px;
+    }
+    
+    .cost-wrap {
+        padding: 15px;
+    }
+    .cost-wrap > * {
+        display: block;
+        margin-right: 0;
+    }
+    .cost-wrap img {
+        width: 30px;
+        margin: 0 auto;
+    }
+    .cost-wrap strong {
+        margin: 5px auto;
+        font-size: 18px;
+    }
+    .cost-wrap.type2{
+        margin-top: 25px;
+    }
+    .cost-wrap.type2 img {
+        width: 45px;
+    }
+
+    /* 회원가입::로그인 */
+    /* 2024.10.29 김수연 추가 */
+    .login-notice {
+        margin-bottom: 30px;
+        border-radius: 10px;
+    }
+    .login-notice img {
+        width: 30px;
+    }
+    .login-notice .tit {
+        margin: 10px 0 20px;
+        font-size: 14px;
+    }
+    .login-notice ul {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .login-notice li {
+        width: 100%;
+        padding: 20px 15px 15px;
+        border-radius: 5px;
+        font-size: 13px;
+    }
+    .login-notice li span {
+        width: 24px;
+        line-height: 24px;
+        font-size: 14px;
+    }
+
+    /* 회원가입::회원가입 완료 */
+    .signup-complete-wrap{
+        padding: 40px 15px;
+    }
+    .signup-complete-wrap > img{
+        width: 55px;
+    }
+    .signup-complete-wrap .join-tit {
+        margin:20px 0 15px;
+        font-size: 18px;
+    }
+    .signup-complete-wrap .join-sub {
+        font-size: 14px;
+    }
+    .signup-complete-wrap .join-des {
+        margin: 20px 0;
+    }
+
+    /* 회원가입::개인정보 취급방침 */
+    .term-wrap .term-conbox{
+        font-size: 14px;
+    }
+
+
+}
+@media screen and (max-width: 480px){    
+    .newsletter li {
+        width: calc(50% - 8px);
+    }
+    .newsletter li:nth-child(3n) {
+        margin-right: 15px;
+    }
+    .newsletter li:nth-child(2n) {
+        margin-right: 0;
+    }
+
+}
+
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    #gnb{
+		height: 100%;
+		padding-bottom: 150px;
+	}
+}
