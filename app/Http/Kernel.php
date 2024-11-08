@@ -66,5 +66,6 @@ class Kernel extends HttpKernel
 
         'view.menu' => Middleware\Site\ViewShareMenu::class,
         'cryptoDecrypt' => Middleware\Site\CryptoDecrypt::class,
+        'bbs.permission' => Middleware\Site\BbsPermission::class,
     ];
 }

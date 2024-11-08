@@ -259,23 +259,17 @@ return [
         ],
     ],
 
-    'ksin' => [
-        'title' => 'KSIN 인증의 인증병원',
+    'bbs' => [
+        'title' => '게시판',
         'route_name' => '',
         'route_parameter' => [],
         'is_show' => true,
         'class_no' => '11',
         'sub' => [
-            'doctor' => [
-                'title' => '지역 인증의 및 병원 찾기',
-                'route_name' => '',
-                'route_parameter' => [],
-                'is_show' => true,
-            ],
-            'certify' => [
-                'title' => 'KSIN 인증제',
-                'route_name' => '',
-                'route_parameter' => [],
+            'general' => [
+                'title' => '일반게시판',
+                'route_name' => 'bbs.list',
+                'route_parameter' => ['general'],
                 'is_show' => true,
             ],
         ],

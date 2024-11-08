@@ -38,3 +38,18 @@ Route::prefix('lib')->controller(\App\Http\Controllers\Lib\LibController::class)
     Route::get('rowspan', 'rowspan')->name('lib.rowspan');
 
 });
+
+Route::prefix('bbs/{bbs_name}')->controller(\App\Http\Controllers\Bbs\BbsController::class)->group(function(){
+    
+    Route::get('', 'list')->name('bbs.list');
+    Route::get('post/{sid?}', 'post')->name('bbs.post');
+    Route::get('{sid/show}', 'show')->name('bbs.show');
+
+    Route::post('data', 'data')->name('bbs.data');
+    Route::get('down', 'down')->name('bbs.down');
+
+});
+
+Route::prefix('file')->controller(\App\Http\Controllers\FileController::class)->group(function(){
+    Route::post('upload/{path}', 'upload')->name('file.upload');
+});

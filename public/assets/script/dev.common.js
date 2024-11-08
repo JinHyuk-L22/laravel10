@@ -510,3 +510,50 @@ const isFocus = (target) => {
 const logout = () => {
     callAjax('/member/logout', {});
 }
+
+const callDatePicker = () => {
+    let datepicker = {};
+
+    $.fn.datepicker.dates['ko'] = {
+        days: ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"],
+        daysShort: ['일', '월', '화', '수', '목', '금', '토'],
+        daysMin: ['일', '월', '화', '수', '목', '금', '토'],
+        months: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+        monthsShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+    };
+
+    $('input:text[datepicker]').each(function (k, v) {
+        datepicker[$(v).attr('id')] = v;
+
+        $(v).datepicker({
+            format: "yyyy-mm-dd",
+            todayHighlight: true,
+            autoclose: true,
+            language: "ko",
+        }).on('show', function (e) {
+            $('.datepicker').css({'position': 'absolute', 'background': 'white','border' : 'solid 1px'});
+        });
+    });
+
+    return datepicker;
+}
+
+const callDateTimePicker = () => {
+    let datetimepicker = {};
+
+    $('input:text[datetimepicker]').each(function (k, v) {
+        datetimepicker[$(v).attr('id')] = v;
+
+        $(v).flatpickr({
+            time_24hr: true,
+            enableTime : true,
+            enableSeconds:true,
+            altInput: true,
+            altFormat: 'Y-m-d H:i',
+            dateFormat : "Y-m-d H:i",
+            locale  : 'ko'
+        });
+    });
+
+    return datetimepicker;
+}
