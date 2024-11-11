@@ -3,13 +3,18 @@
 namespace App\Http\Controllers\Bbs;
 
 use App\Http\Controllers\Controller;
+use App\Services\Bbs\BbsServices;
 use Illuminate\Http\Request;
 use App\Models\Bbs;
 
 class BbsController extends Controller{
 
+    private $bbsServices;
+
     public function __construct(){
         $this->middleware('bbs.permission');
+
+        $this->bbsServices = new BbsServices();
     }
 
     public function list( Request $request ){
@@ -44,5 +49,9 @@ class BbsController extends Controller{
 
         return view('bbs.' . config('site.bbs.' . $bbs_name . '.skin').".post");
 
+    }
+
+    public function data(Request $request){
+        return $this->bbsServices->dataAction($request);
     }
 }

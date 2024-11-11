@@ -40,6 +40,7 @@ return [
             'popup'     => true, // 팝업 사용 여부
             'reply'     => true, // 답글 사용 여부
             'commment'  => true, // 댓글(코멘트) 사용 여부
+            'upload'    => true, // 업로드
         ],
         'pageView'  => 10,        // 리스트에 보여질 갯수
         'main_key'  => 'bbs',     // 상위 메뉴명

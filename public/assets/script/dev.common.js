@@ -46,6 +46,12 @@ const callAjax = (url, obj, isDebug = false) => {
     }, isDebug);
 }
 
+const callMultiAjax = (url, obj, isDebug = false) => {
+    callbackMultiAjax(url, obj, function (data, error) {
+        (data) ? ajaxSuccessData(data) : ajaxErrorData(error);
+    }, isDebug);
+}
+
 /* 
     step3 -> step4
     discription : 파라미터로 넘어온 json을 encryptData에서 암호화하여 ajax 통신
@@ -557,3 +563,12 @@ const callDateTimePicker = () => {
 
     return datetimepicker;
 }
+
+$(document).on("keydown", "input[onlyBackSpace]", function(event){
+    if (event.keyCode !== 8) {
+        event.preventDefault();
+        return false;
+    }
+});
+
+

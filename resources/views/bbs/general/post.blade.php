@@ -1,285 +1,13 @@
 @extends('layouts.header')
 @section('content')
-    @push('css')
-        <link type="text/css" rel="stylesheet" href="{{ asset('/assets/script/plupload/2.3.6/jquery.plupload.queue/css/jquery.plupload.queue.css')}}" />
-    @endpush
+
     @push('scripts')
         @include('layouts.alert')
-        <script type="text/javascript" src="{{ asset('/assets/script/tinymce/tinymce.min.js') }}" charset="utf-8"></script>
+        
+        @include('bbs.script.tinymce')
+        @include('bbs.script.plupload')
+        @include('bbs.script.default')
 
-        <script type="text/javascript" src="{{ asset('/assets/script/plupload/2.3.6/plupload.full.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('/assets/script/plupload/2.3.6/i18n/ko.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('/assets/script/plupload/2.3.6/jquery.plupload.queue/jquery.plupload.queue.min.js') }}"></script>
-        <script>
-
-            $(function(){
-
-
-                callDatePicker();
-
-                $("#postForm").submit(function(e){
-                    // e.preventDefault();
-                    var formname = "#"+$(this).attr('id');
-
-                    if(!empty_check('subject', '제목을 입력해주세요.', formname)) return false;
-                    @if( $bbsConfig['use']['notice'] )
-                        if(!empty_check('notice', '공지 여부를 선택해주세요.', formname)) return false;
-                    @endif
-                    @if( $bbsConfig['use']['popup'] )
-                        if(!empty_check('popup', '팝업 설정 여부를 선택해주세요.', formname)) return false;
-                        if( $("input[name=popup]:checked").val() == 'Y' ){
-                            if( $("input[name=popup_startdate]").val() ){
-                                if( $("input[name=popup_startdate]").val().length < 10 ){
-                                    alert('팝업 시작일을 전부 입력해주세요.');
-                                    $("input[name=popup_startdate]").focus();
-                                    return false;
-                                }
-                            }
-                            if( $("input[name=popup_enddate]").val() ){
-                                if( $("input[name=popup_enddate]").val().length < 10 ){
-                                    alert('팝업 종료일을 전부 입력해주세요.');
-                                    $("input[name=popup_enddate]").focus();
-                                    return false;
-                                }
-                            }
-                        }
-                    @endif
-                    if(!empty_check('open', '공개 여부를 선택해주세요.', formname)) return false;
-
-                    var $form = $("#postForm");
-
-                    if($("#file_status").val()=='Y'){
-                        return true;
-                    }
-
-                    var uploader = $("#plupload").pluploadQueue();
-
-                    if (uploader.files.length > 0) {
-                        // When all files are uploaded submit form
-                        uploader.bind('StateChanged', function () {
-                            if (uploader.files.length === (uploader.total.uploaded + uploader.total.failed)) {
-                                $("#file_status").val("Y");
-                                $form.submit();
-                            }
-                        });
-                        uploader.start();
-
-                    } else {
-                        return true;
-                    }
-                    return false;
-                })
-
-
-
-
-                $('#plupload').pluploadQueue({
-                    runtimes : 'html5,flash',
-                    flash_swf_url : '/script/Moxie.swf',
-                    silverlight_xap_url : '/script/Moxie.xap',
-                    url : '{{ route('file.upload', ['path' => $bbs_name, 'imsi' => $imsi]) }}',
-                    dragdrop: true,
-                    headers: {
-                        Accept: 'application/json',
-                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
-                    },
-                    filters : {
-                        max_file_size : '20mb'
-                    },
-                    init: {
-                        PostInit: function(up) {
-                            $(up.getOption('container')).find('.plupload_button.plupload_start').hide();
-                        },
-                        Error: function (up, err) {
-                            if (err.code === plupload.HTTP_ERROR) {
-                                up.stop();
-                                alert('파일 업로드 에러 - ' + err.message);
-                            }
-                        },
-                        FileUploaded: function (up, file, info) {
-                            var data = JSON.parse(info.response);
-
-                            if (data.stored_path !== undefined) {
-                                var file_index = $('#' + file.id).index();
-                                $('#plupload').append('<input type="hidden" name="plupload_' + file_index + '_stored_path" value="' + data.stored_path + '" />');
-                            }
-
-                        }
-                    }
-                });
-
-                const tinymce_image_upload_handler = (blobInfo, progress) => new Promise((resolve, reject) => {
-                    const xhr = new XMLHttpRequest();
-                    xhr.withCredentials = false;
-                    xhr.open('POST', '/common/tinyUpload');
-
-                    xhr.upload.onprogress = (e) => {
-                        progress(e.loaded / e.total * 100);
-                    };
-
-                    xhr.onload = () => {
-                        if (xhr.status === 403) {
-                            reject({message: 'HTTP Error: ' + xhr.status, remove: true});
-                            return;
-                        }
-
-                        if (xhr.status < 200 || xhr.status >= 300) {
-                            reject('HTTP Error: ' + xhr.status);
-                            return;
-                        }
-
-                        const json = JSON.parse(xhr.responseText);
-
-                        if (!json || typeof json.location != 'string') {
-                            reject('Invalid JSON: ' + xhr.responseText);
-                            return;
-                        }
-
-                        resolve(json.location);
-                    };
-
-                    xhr.onerror = () => {
-                        reject('Image upload failed due to a XHR Transport error. Code: ' + xhr.status);
-                    };
-
-                    const formData = new FormData();
-                    formData.append('file', blobInfo.blob(), blobInfo.filename());
-                    formData.append('_token', $('meta[name=csrf-token]').attr('content'));
-
-                    xhr.send(formData);
-                });
-
-                tinymce.init({
-                    promotion: false,
-                    selector: '.tinymce', // 에디터 사용 클래스
-                    language: 'ko_KR',
-                    plugins: [
-                        'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
-                        'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen',
-                        'insertdatetime', 'media', 'table', 'help', 'wordcount'
-                    ],
-                    toolbar: 'undo redo | blocks | ' +
-                        'bold italic backcolor | alignleft aligncenter ' +
-                        'alignright alignjustify | bullist numlist outdent indent | ' +
-                        'removeformat | help',
-                    relative_urls: false,
-                    remove_script_host: false,
-                    convert_urls: true,
-                    image_class_list: [
-                        {title: 'img-responsive', value: 'img-responsive'},
-                    ],
-                    image_title: true,
-                    automatic_uploads: true,
-                    file_picker_types: 'image',
-                    images_upload_handler: tinymce_image_upload_handler,
-                    file_picker_callback: function (cb, value, meta) {
-                        let input = document.createElement('input');
-
-                        input.setAttribute('type', 'file');
-                        input.setAttribute('accept', 'image/*');
-
-                        input.onchange = function () {
-                            const file = this.files[0];
-                            const reader = new FileReader();
-
-                            reader.readAsDataURL(file);
-                            reader.onload = function () {
-                                const id = 'blobid' + moment().valueOf();
-                                let blobCache = tinymce.activeEditor.editorUpload.blobCache;
-
-                                const base64 = reader.result.split(',')[1];
-                                const blobInfo = blobCache.create(id, file, base64);
-
-                                blobCache.add(blobInfo);
-                                cb(blobInfo.blobUri(), {title: file.name});
-                            };
-                        };
-
-                        input.click();
-                    },
-                    setup: function(editor) {
-
-                    }
-                });
-
-                $(".onlyBackSpace").keydown(function( event ){
-
-                    if( event.keyCode !== 8 ){
-                        event.preventDefault();
-                        return false;
-                    }
-                });
-
-                $('a.popView').click(function(){
-                    $frm = $('#postForm');
-                    var formname = "#postForm";
-
-                    if( $(formname).find('input[type="radio"][name="popup_select"]:checked').val() == 'P' ){
-                        var tiny_text = tinymce.get('popup_content').getContent();
-                    } else {
-                        var tiny_text = tinymce.get('content').getContent();
-                    }
-
-                    var tiny_checker = '';
-
-                    tiny_checker = tiny_text.replace(/(<([^>]+)>)/ig,"");
-                    tiny_checker = tiny_text.replace(/<br\/>/ig, "\n");
-                    tiny_checker = tiny_text.replace(/<(\/)?([a-zA-Z]*)(\s[a-zA-Z]*=[^>]*)?(\s)*(\/)?>/ig, "");
-
-
-                    if( !tiny_checker ) {
-                        alert('팝업 내용을 입력해 주세요.');
-                        return false;
-                    }
-
-                    var file_array = [];
-                    @if( count($target->files) > 0 )
-                        @foreach( $target->files as $fKey => $file )
-                            file_array[{{ $fKey }}] = '{{ $file->filename }}';
-                        @endforeach
-                    @endif
-
-                    console.log( file_array );
-
-                    $.ajax({
-                        type: "POST",
-                        url: "{{ route('bbs.data', $bbs_name) }}",
-                        data: {
-                            type            : 'pop_view',
-                            temp            : $("input[name=popup_template]:checked").val(),
-                            popup_width     : $("input[name=popup_width]").val(),
-                            popup_height    : $("input[name=popup_height]").val(),
-                            popup_position_y: $("input[name=popup_position_y]").val(),
-                            popup_position_x: $("input[name=popup_position_x]").val(),
-                            popup_detail    : $("input[name=popup_detail]:checked").val(),
-                            linkurl         : $("input[name=linkurl]").val(),
-                            content         : tiny_text,
-                            file_array      : file_array,
-                            _token          : '{{ csrf_token() }}'
-                        },
-                        success: function(pop) {
-                            $(".sub-contents").append(pop);
-                            console.log( pop );
-                        },
-                        error: function(xhr, option, error) {
-                            alert(xhr.status); //오류코드
-                            alert(error); //오류내용
-                        },
-                    });
-                    return false;
-                });
-
-            })
-
-            function fn_popup_show( val ){
-                if( val == 'Y' ){
-                    $(".popup_details").show();
-                } else {
-                    $(".popup_details").hide();
-                }
-            }
-
-        </script>
     @endpush
     <article class="sub-contents">
         <div class="sub-conbox inner-layer">
@@ -289,9 +17,8 @@
             <div class="board-wrap">
                 <div class="board-write">
                     <form action="{{ route('bbs.data', $bbs_name) }}" method="post" id="postForm">
-                        @csrf
                         <input type="hidden" name="sid" value="{{ $target->sid ?? '' }}">
-                        <input type="hidden" name="type" value="{{ !empty($target->sid) ? 'edit' : 'write'}}">
+                        <input type="hidden" name="type" value="post">
                         <input type="hidden" name="id" value="{{ Auth::user()->id }}">
                         <input type="hidden" name="name" value="{{ Auth::user()->name_kr }}">
                         <input type="hidden" name="email" value="{{ Auth::user()->email }}">
@@ -310,7 +37,7 @@
                                 <li>
                                     <div class="tit"><strong class="required">*</strong> 제목</div>
                                     <div class="con">
-                                        <input type="text" name="subject" id="subject" class="form-item" value="{{ $target->subject }}">
+                                        <input type="text" name="subject" id="subject" class="form-item" value="{{ $target->subject }}" onlyBackSpace>
                                         @if( $bbsConfig['use']['main'] )
                                             <div class="checkbox-wrap cst">
                                                 <div class="checkbox-group">
@@ -433,33 +160,37 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li>
-                                    <div class="tit">Link URL</div>
-                                    <div class="con">
-                                        <input type="text" name="linkurl" id="linkurl" class="form-item" value="{{ $target->linkurl }}">
-                                    </div>
-                                </li>
+                                @if( $bbsConfig['use']['link'] )
+                                    <li>
+                                        <div class="tit">Link URL</div>
+                                        <div class="con">
+                                            <input type="text" name="linkurl" id="linkurl" class="form-item" value="{{ $target->linkurl }}">
+                                        </div>
+                                    </li>
+                                @endif
                                 <li>
                                     <div class="con">
                                         <textarea id="content" name="content" class="tinymce">{!! $target->content !!}</textarea>
                                     </div>
                                 </li>
-                                <li>
-                                    <div class="con" id="plupload">
-
-                                    </div>
-                                </li>
-                                @if( count($target->files) > 0 )
+                                @if( $bbsConfig['use']['upload'] )
                                     <li>
-                                        <div class="con">
-                                            @foreach( $target->files as $file )
-                                                <label for="edit_form_delete_files_{{ $file->sid }}" class="lm0 tm5 bm5" style="display: block;">
-                                                    <input type="checkbox" id="edit_form_delete_files_{{ $file->sid }}" name="delete_files[]" value="{{ $file->sid }}">
-                                                    삭제 - <img src="" alt="" /> {{ $file->filename }}
-                                                </label>
-                                            @endforeach
+                                        <div class="con" id="plupload">
+
                                         </div>
                                     </li>
+                                    @if( count($target->files) > 0 )
+                                        <li>
+                                            <div class="con">
+                                                @foreach( $target->files as $file )
+                                                    <label for="edit_form_delete_files_{{ $file->sid }}" class="lm0 tm5 bm5" style="display: block;">
+                                                        <input type="checkbox" id="edit_form_delete_files_{{ $file->sid }}" name="delete_files[]" value="{{ $file->sid }}">
+                                                        삭제 - <img src="" alt="" /> {{ $file->filename }}
+                                                    </label>
+                                                @endforeach
+                                            </div>
+                                        </li>
+                                    @endif
                                 @endif
                             </ul>
                             <div class="btn-wrap text-center">
